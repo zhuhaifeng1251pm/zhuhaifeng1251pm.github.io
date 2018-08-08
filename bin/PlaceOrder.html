@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MoreZhan-填写订单</title>
+    <link rel="stylesheet" href="./css/relize.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/palceorder.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/remarks.css">
+    <link rel="stylesheet" href="./css/add-Newaddress.css">
+    <link rel="Shortcut Icon" href="http://pcgnine5c.bkt.clouddn.com/icon-gamepad.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="wrap1">
+        <div class="toAdd-address">
+            <div class="toAdd-address-head">
+                <b>新增地址</b>
+                <a href="javajscript:;" id="close-toAdd-address">x</a>
+            </div>
+            <div class="toAdd-address-body">
+                <ul>
+                    <li>
+                        <div class="left-box">
+                            <div class="title-box">
+                                <span>
+                                    <u>*</u> 收货人</span>
+                                <span class="error" id="error-consignee">请填写收货人！</span>
+                            </div>
+                            <input type="text" id="consignee">
+                        </div>
+                        <div class="right-box">
+                            <div class="title-box">
+                                <span>
+                                    <u>*</u> 联系电话</span>
+                                <span class="error" id="error-contact-number">填写的手机号格式错误！</span>
+                            </div>
+                            <input type="text" id="contact-number">
+                        </div>
+
+                    </li>
+                    <li>
+                        <div class="title-box">
+                            <span>
+                                <u>*</u> 所在地区</span>
+                            <span class="error" id="error-selector">请填写完整的所在地区！</span>
+                        </div>
+                        <div class="selector">
+                            <select class="form-control" id="cmbProvince" name="cmbProvince">
+                            </select>
+                            <select class="form-control" id="cmbCity" name="cmbCity">
+                                <option value=""></option>
+                            </select>
+                            <select class="form-control" id="cmbArea" name="cmbArea">
+                                <option value="">3</option>
+                            </select>
+                        </div>
+
+                    </li>
+                    <li>
+                        <div class="title-box">
+                            <span>
+                                <u>*</u> 详细地址</span>
+                            <span class="error" id="error-detailed-address">请填写详细地址！</span>
+                        </div>
+                        <input type="text" id="detailed-address" placeholder=" 请填写详细地址">
+                    </li>
+                    <li>
+                        <div class="otherName-left">
+                            <label for="">地址别名</label>
+                            <input type="text" id="address-ortherName">
+                        </div>
+                        <div class="otherName-right">
+                            <span>常用别名</span>
+                            <div class="select-types">
+                                <a href="javaScript:;" id="is-home" class="is-what">
+                                    <input type="checkbox" id="is-what-home">
+                                    <label for="is-what-home">家</label>
+                                </a>
+                                <a href="javaScript:;" id="is-company" class="is-what">
+                                    <input type="checkbox" id="is-what-company">
+                                    <label for="is-what-company">公司</label>
+                                </a>
+                                <a href="javaScript:;" id="is-parents" class="is-what">
+                                    <input type="checkbox" id="is-what-parents">
+                                    <label for="is-what-parents">父母家</label>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="set-address">
+                            <input type="checkbox" id="set-toIs">
+                            <label for="set-toIs">设为默认地址</label>
+                        </div>
+                        <a href="javajscript:;" id="address-saveBtn">保存地址</a>
+
+
+
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="wrap">
+        <header>
+            <div class="header-main">
+                <a href="javascript:;"></a>
+                <a href="../index.html"></a>
+                <div class="login">
+                    <a href="javascript:;"></a>
+                    <a href="./Shopping Cart.html"></a>
+                    <div class="tologin">
+                        <a href="javascript:;">登录</a> /
+                        <a href="javascript:;">注册</a>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="main">
+                <div class="ShoppingCart-process">
+                    <div class="ShoppingCart-processUp">
+                        <h3>填写订单
+                        </h3>
+                        <div class="processing">
+                            <span>购物车</span>
+                            <span>填写订单</span>
+                            <span>付款，购买成功</span>
+                        </div>
+                    </div>
+                    <div class="ShoppingCart-processDown"></div>
+                </div>
+                <div class="shoppingCart-main">
+                    <div class="shoppingCart-main-head">
+                        <div class="shoppingCart-main-head-title">
+                            <h4>收货地址</h4>
+                            <a href="javajscript:;" id="newAddress">新增地址</a>
+                        </div>
+                        <div class="shoppingCart-main-head-content">
+                            <ul id="addressAll">
+                                <li class="contact-address">
+
+                                    <ul>
+                                        <li>阿不来提·阿不都热西提</li>
+                                        <li>新建维吾尔自治区博尔塔拉蒙古自治州塔格特90团乎热郭木村9连5区13号</li>
+                                        <li>186 **** 5149</li>
+                                    </ul>
+                                    <input type="checkbox" id="address0" class="contact-address-checkbox">
+                                    <label for="address0"></label>
+                                    <div class="isORno-delete">
+                                        <a href="javaScript:;" class="isdelete">
+                                            <img src="./images/isdelete_06.jpg" alt=""> </a>
+                                        <a href="javascript:;" class="isnodelete">
+                                            <img src="./images/isnodelete_03.jpg" alt=""> </a>
+                                    </div>
+                                    <div class="buttons">
+                                        <a href="javascript:;" class="default">设为默认</a>
+                                        <a href="javascript:;" class="edit">编辑</a>
+                                        <a href="javascript:;" class="delBtn">删除</a>
+                                    </div>
+
+                                </li>
+                                <li class="contact-address">
+
+                                    <ul>
+                                        <li>买买提·艾力</li>
+                                        <li>新疆维吾尔族自治区伊犁州新源县那拉提镇农场科勒布拉克村二组</li>
+                                        <li>159 **** 1136</li>
+                                    </ul>
+                                    <input type="checkbox" id="address1" class="contact-address-checkbox">
+                                    <label for="address1"></label>
+                                    <div class="isORno-delete">
+                                        <a href="javaScript:;" class="isdelete">
+                                            <img src="./images/isdelete_06.jpg" alt=""> </a>
+                                        <a href="javascript:;" class="isnodelete">
+                                            <img src="./images/isnodelete_03.jpg" alt=""> </a>
+                                    </div>
+                                    <div class="buttons">
+                                        <a href="javascript:;" class="default">默认</a>
+                                        <a href="javascript:;" class="edit">编辑</a>
+                                        <a href="javascript:;" class="delBtn">删除</a>
+                                    </div>
+                                </li>
+                                <li class="contact-address">
+
+                                    <ul>
+                                        <li>迪里木拉提</li>
+                                        <li>新疆维吾尔自治区伊犁哈萨克自治州奎屯市乌鲁木齐西路56园72幢1单元1103号</li>
+                                        <li>186 **** 0734</li>
+                                    </ul>
+                                    <input type="checkbox" id="address2" class="contact-address-checkbox">
+                                    <label for="address2"></label>
+                                    <div class="isORno-delete">
+                                        <a href="javaScript:;" class="isdelete">
+                                            <img src="./images/isdelete_06.jpg" alt=""> </a>
+                                        <a href="javascript:;" class="isnodelete">
+                                            <img src="./images/isnodelete_03.jpg" alt=""> </a>
+                                    </div>
+                                    <div class="buttons">
+                                        <a href="javascript:;" class="default">设为默认</a>
+                                        <a href="javascript:;" class="edit">编辑</a>
+                                        <a href="javascript:;" class="delBtn">删除</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="javascript:;" id="to-show-more">
+                                <b>显示更多</b>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="shoppingCart-main-body">
+                        <div class="shoppingCart-main-body-title">
+                            <h4>商品信息</h4>
+                            <a href="javaScript:;" id="back-shoppingcar">返回购物车修改</a>
+                        </div>
+                        <div class="shoppingCart-main-body-content">
+                            <ul>
+                                <li>
+                                    <div class="shoppingCart-main-body-content-left">
+                                        <a href="javascript:;">
+                                            <img src="./images/small-people_69.jpg" alt="">
+                                        </a>
+                                        <img src="./images/small-sale.jpg" alt="">
+                                        <p>龙之谷六周年限定礼包大Boos冰龙款男士T恤</p>
+                                    </div>
+                                    <div class="shoppingCart-main-body-content-right">
+                                        <span>款式:iphone5</span>
+                                        <span>尺码:XL</span>
+
+                                        <b class="goods-prise">79.00</b>
+
+
+                                        <b> X1</b>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="shoppingCart-main-body-content-left">
+                                        <a href="javascript:;">
+                                            <img src="./images/small-people_69.jpg" alt="">
+                                        </a>
+                                        <img src="./images/small-sale.jpg" alt="">
+                                        <p>龙之谷六周年限定礼包大Boos冰龙款男士T恤</p>
+                                    </div>
+                                    <div class="shoppingCart-main-body-content-right">
+                                        <span>款式:iphone5</span>
+                                        <span>尺码:XL</span>
+
+                                        <b class="goods-prise">79.00</b>
+
+                                        <b>X1</b>
+
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="shoppingCart-main-body-ending">
+                            <div class="shoppingCart-main-body-ending-left">
+                                <div class="fn-box">
+                                    <b>支付方式</b>
+                                    <div class="checked-box">
+                                        <input type="checkbox" id="pay-checked" checked>
+                                        <label for="pay-checked">在线支付</label>
+                                    </div>
+                                </div>
+                                <div class="fn-box">
+                                    <b>物流方式</b>
+                                    <div class="checked-box">
+                                        <input type="checkbox" id="transport" checked>
+                                        <label for="transport">普通快递</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shoppingCart-main-body-ending-right">
+                                <b>发票信息</b>
+                                <div class="checked-box">
+                                    <input type="checkbox" id="noDraw-bills">
+                                    <label for="noDraw-bills">不开发票</label>
+                                </div>
+                                <div class="checked-box">
+                                    <input type="checkbox" id="isDraw-bills" checked>
+                                    <label for="isDraw-bills">开发票</label>
+                                </div>
+                                <input type="text" placeholder=" 请输入个人/单位名称" id="bills-title">
+                                <a href="javascript:;" id="saveBtn">保存</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="shoppingCart-main-foot-start">
+                        <div class="remarks-box">
+                            <b>备注</b>
+                            <textarea name="remarks" id="" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="liquidation-box">
+                            <div class="liquidation-box-up">
+                                <span>数量</span>
+                                <span>单价</span>
+                                <span>小计</span>
+                                <span>优惠</span>
+                                <span>运费</span>
+                                <u>实际应付</u>
+                            </div>
+                            <div class="liquidation-box-down">
+                                <span>2</span>
+                                <span>x</span>
+                                <span>￥79.00</span>
+                                <span>=</span>
+                                <span>￥158.00</span>
+                                <span>-</span>
+                                <span>￥0.00</span>
+                                <span>+</span>
+                                <span>￥10.00</span>
+                                <span>=</span>
+                                <u>￥168.00</u>
+                            </div>
+
+                            <a href="javascript:;" id="save-alert">提交订单</a>
+                        </div>
+                        <div class="box1">
+                            <ul>
+                                <li></li>
+                                <li>请先点击上方的保存按钮</li>
+                            </ul>
+                        </div>
+
+
+
+
+
+                    </div>
+
+                    <div class="shoppingCart-main-foot">
+                        <div class="remarks-box">
+                            <b>备注</b>
+                            <textarea name="remarks" id="" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="liquidation-box">
+                            <b>清算</b>
+                            <ul>
+                                <li>
+
+                                    <span>
+                                        <u id="to-pay-counts">2</u>件商品，总金额:</span>
+                                    <span>￥79.00</span>
+                                </li>
+                                <li>
+                                    <span>优惠金额:</span>
+                                    <span>-￥0.00</span>
+                                </li>
+                                <li>
+                                    <span>运费:</span>
+                                    <span>￥0.00</span>
+                                </li>
+                                <li>
+                                    <span>应付金额:</span>
+                                    <span id="to-pay-prise">￥168.00</span>
+                                </li>
+                            </ul>
+                            <a href="javascript:;" id="to-pay">提交订单</a>
+                        </div>
+
+
+
+
+
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-up ">
+                <div class="footer-up-main ">
+                    <div class="help ">
+                        <h4>帮助信息</h4>
+                        <ul>
+                            <li>
+                                <img src="./images/Inco1_15.jpg " alt=" ">
+                                <a href="javascript:; "> 购物指南</a>
+                            </li>
+                            <li>
+                                <img src="./images/Inco5_15.jpg " alt=" ">
+                                <a href="javascript:; "> 服务中心</a>
+                            </li>
+                            <li>
+                                <img src="./images/Inco2_18.jpg " alt=" ">
+                                <a href="javascript:; "> 支付方式</a>
+                            </li>
+                            <li>
+                                <img src="./images/Inco6_18.jpg " alt=" ">
+                                <a href="javascript:; "> 关于我们</a>
+                            </li>
+                            <li>
+                                <img src="./images/Inco3_18.jpg " alt=" ">
+                                <a href="javascript:; "> 配送方式</a>
+                            </li>
+                            <li>
+                                <img src="./images/Inco7_18.jpg " alt=" ">
+                                <a href="javascript:; "> 免责条款</a>
+                            </li>
+                            <li>
+                                <img src="./images/Inco4_18.jpg " alt=" ">
+                                <a href="javascript:; "> 售后服务</a>
+                            </li>
+                            <li>
+                                <img src="./images/Inco8_18.jpg " alt=" ">
+                                <a href="javascript:; "> 友情链接</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="aboutUs ">
+                        <h4>关注我们</h4>
+                        <div class="about-code ">
+                            <div class="showpic ">
+                                <img src="./images/taobao-code_15.jpg " alt=" ">
+                                <img class="img1 " src="./images/taobao-inco_19.jpg " alt=" ">
+                            </div>
+                            <div class="showpic ">
+                                <img src="./images/wechat-code_15.jpg " alt=" ">
+                                <img class="img1 " src="./images/wechat-inco_19.jpg " alt=" ">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hotline ">
+                        <h4>客服热线</h4>
+                        <p>
+                            400 113 5353
+                            <span>[ 周一至周五 ：00-18:00 ]</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-down ">
+                <div class="footer-down-main ">
+                    <a href="index.html "></a>
+                    <ul>
+                        <li>北京开普乐科技有限公司©版权所有 Copyright 2015-2025 Morethan.oc All rights reserved.</li>
+                        <li>地址：北京市朝阳区建国路93号院4号楼4层505</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/placeorder.js"></script>
+    <script src="./js/add-Newaddress.js"></script>
+
+</body>
+
+</html>

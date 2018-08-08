@@ -1,0 +1,220 @@
+section .main .ShoppingCart-processUp > h3 {
+  width: 250px;
+  font-weight: normal;
+  padding-left: 22px;
+}
+section .main .shoppingCart-main {
+  position: relative;
+}
+section .main .shoppingCart-main .shoppingCart-main-head {
+  width: 1100px;
+  height: 115px;
+  margin: 0 auto;
+  border-top: 2px solid #b8beca;
+  border-bottom: 2px solid #b8beca;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+}
+section
+  .main
+  .shoppingCart-main
+  .shoppingCart-main-head
+  .shoppingCart-main-head-left {
+  width: 373px;
+  height: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+section
+  .main
+  .shoppingCart-main
+  .shoppingCart-main-head
+  .shoppingCart-main-head-left
+  > a {
+  width: 96px;
+  height: 96px;
+}
+section
+  .main
+  .shoppingCart-main
+  .shoppingCart-main-head
+  .shoppingCart-main-head-left
+  > h4 {
+  width: 240px;
+  line-height: 22px;
+  font-size: 18px;
+  color: #2c2d34;
+}
+section
+  .main
+  .shoppingCart-main
+  .shoppingCart-main-head
+  .shoppingCart-main-head-right {
+  width: 725px;
+  height: 76px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 2px solid #fdd900;
+}
+section
+  .main
+  .shoppingCart-main
+  .shoppingCart-main-head
+  .shoppingCart-main-head-right
+  > ul {
+  width: 110px;
+  height: 76px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+section
+  .main
+  .shoppingCart-main
+  .shoppingCart-main-head
+  .shoppingCart-main-head-right
+  > ul
+  > li {
+  width: 102px;
+  font-size: 14px;
+  color: #717277;
+  margin-left: 20px;
+}
+section
+  .main
+  .shoppingCart-main
+  .shoppingCart-main-head
+  .shoppingCart-main-head-right
+  .is-to-shoppingCar {
+  display: flex;
+  width: 342px;
+  height: 46px;
+  align-items: center;
+  margin-right: 11px;
+}
+section
+  .main
+  .shoppingCart-main
+  .shoppingCart-main-head
+  .shoppingCart-main-head-right
+  .is-to-shoppingCar
+  > a:nth-child(1) {
+  width: 132px;
+  line-height: 46px;
+  background-color: #2b2e33;
+  font-size: 18px;
+  color: #feffff;
+  text-align: center;
+  text-decoration: none;
+  margin-right: 10px;
+}
+section
+  .main
+  .shoppingCart-main
+  .shoppingCart-main-head
+  .shoppingCart-main-head-right
+  .is-to-shoppingCar
+  > a:nth-child(2) {
+  width: 210px;
+  line-height: 46px;
+  background-color: #fcd901;
+  color: #000100;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+}
+section .main .shoppingCart-main .shoppingCart-main-body {
+  width: 117px;
+  line-height: 30px;
+  background-color: #fff;
+  text-align: center;
+  position: absolute;
+  top: 188px;
+  left: 39px;
+}
+section .main .shoppingCart-main .shoppingCart-main-foot {
+  width: 1100px;
+  height: 390px;
+  margin: 0 auto;
+  border-top: 1px solid #fdd901;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 86px;
+  padding-bottom: 100px;
+}
+section .main .shoppingCart-main .shoppingCart-main-foot .show-goods {
+  width: 196px;
+  height: 317px;
+  display: flex;
+  flex-direction: column;
+}
+section .main .shoppingCart-main .shoppingCart-main-foot .show-goods > img {
+  width: 196px;
+  height: 196px;
+}
+section .main .shoppingCart-main .shoppingCart-main-foot .show-goods > ul {
+  width: 195px;
+  height: 120px;
+  border: 1px solid #d1d7e3;
+  border-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+section .main .shoppingCart-main .shoppingCart-main-foot .show-goods > ul > li {
+  width: 196px;
+  height: 32px;
+}
+section
+  .main
+  .shoppingCart-main
+  .shoppingCart-main-foot
+  .show-goods
+  > ul
+  > li
+  > p {
+  width: 140px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 9px;
+  margin-left: 10px;
+}
+section
+  .main
+  .shoppingCart-main
+  .shoppingCart-main-foot
+  .show-goods
+  > ul
+  > li:last-child {
+  color: #dd2324;
+  font-size: 24px;
+  line-height: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section
+  .main
+  .shoppingCart-main
+  .shoppingCart-main-foot
+  .show-goods
+  > ul
+  > li:last-child
+  > a {
+  width: 62px;
+  height: 21px;
+  border: 2px solid #ffd801;
+  background-image: url('../images/yellow-inco_49.jpg');
+  background-repeat: no-repeat;
+  background-size: 22%;
+  background-position: 24px 2px;
+  margin-right: 10px;
+}

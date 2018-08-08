@@ -1,0 +1,319 @@
+section .main {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  /* display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center; */
+}
+section .main .loop-pic {
+  width: 100%;
+  background-image: url("../image/loop-picbgi_28.jpg");
+}
+section .main .buyBox {
+  width: 100p;
+  /* height: 584px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section .main .buyBox .buyBox-inner-up {
+  width: 100%;
+  background-color: #2b2e33;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section .main .buyBox .buyBox-inner-up .prise {
+  width: 1100px;
+  height: 326px;
+  display: flex;
+  margin-top: 30px;
+}
+section .main .buyBox .buyBox-inner-up .prise .pre-sale {
+  width: 630px;
+  height: 306px;
+  border-right: 1px solid #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+section .main .buyBox .buyBox-inner-up .prise .pre-sale .title {
+  display: flex;
+  height: 126px;
+  position: relative;
+}
+section .main .buyBox .buyBox-inner-up .prise .pre-sale .title > h3 {
+  width: 395px;
+  line-height: 44px;
+  font-size: 34px;
+  color: white;
+  font-weight: lighter;
+  position: absolute;
+  top: -40px;
+  left: 120px;
+}
+
+section .main .buyBox .buyBox-inner-up .prise .pre-sale > .count-down {
+  width: 418px;
+  margin-top: 10px;
+}
+section .main .buyBox .buyBox-inner-up .prise .pre-sale > .count-down > .time {
+  width: 416px;
+  height: 62px;
+  background-color: #707378;
+  border: 1px solid #707378;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fdd900;
+  font-size: 32px;
+}
+section
+  .main
+  .buyBox
+  .buyBox-inner-up
+  .prise
+  .pre-sale
+  > .count-down
+  > .time
+  > .time-ele {
+  flex-direction: column;
+  display: flex;
+  color: #fdd900;
+}
+section
+  .main
+  .buyBox
+  .buyBox-inner-up
+  .prise
+  .pre-sale
+  > .count-down
+  > .time
+  > u {
+  text-decoration: none;
+  margin-bottom: 22px;
+}
+section
+  .main
+  .buyBox
+  .buyBox-inner-up
+  .prise
+  .pre-sale
+  > .count-down
+  > .time
+  > .time-ele
+  > b {
+  font-size: 32px;
+}
+section
+  .main
+  .buyBox
+  .buyBox-inner-up
+  .prise
+  .pre-sale
+  > .count-down
+  > .time
+  > .time-ele
+  > span {
+  font-size: 12px;
+  text-align: center;
+}
+
+section .main .buyBox .buyBox-inner-up .prise .pre-sale > .count-down > p {
+  line-height: 1px;
+  font-size: 14px;
+  color: #707378;
+}
+section
+  .main
+  .buyBox
+  .buyBox-inner-up
+  .prise
+  .pre-sale
+  > .count-down
+  > p
+  > span {
+  color: #fdd900;
+}
+
+section .main .buyBox .buyBox-inner-up .prise .goods-type {
+  width: 468px;
+  height: 306px;
+  border-left: 1px solid #fff;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+}
+
+section .main .buyBox .buyBox-inner-up .prise .goods-type span {
+  width: 62px;
+  line-height: 24px;
+  border: 1px solid #fff;
+  background-color: #fff;
+  border-radius: 9px;
+  font-size: 14px;
+  margin-left: 50px;
+  margin-right: 30px;
+  text-align: center;
+}
+section .main .buyBox .buyBox-inner-up .prise .goods-type .goods {
+  text-decoration: none;
+  font-size: 14px;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 7px;
+  text-align: center;
+}
+section .main .buyBox .buyBox-inner-up .prise .goods-type > .total-price {
+  display: flex;
+  align-items: center;
+}
+section .main .buyBox .buyBox-inner-up .prise .goods-type > .total-price > u {
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+}
+section .main .buyBox .buyBox-inner-up .prise .goods-type > .total-price > b {
+  color: #fdd900;
+  font-size: 36px;
+}
+section .main .buyBox .buyBox-inner-up .prise .goods-type > .goods-style {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+section
+  .main
+  .buyBox
+  .buyBox-inner-up
+  .prise
+  .goods-type
+  > .goods-style
+  > .goods {
+  width: 77px;
+  line-height: 24px;
+  margin-left: 5px;
+}
+section
+  .main
+  .buyBox
+  .buyBox-inner-up
+  .prise
+  .goods-type
+  > .goods-style
+  > .goods:nth-child(2) {
+  margin-left: 0;
+}
+section .main .buyBox .buyBox-inner-up .prise .goods-type > .goods-size {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+section .main .buyBox .buyBox-inner-up .prise .goods-type > .goods-size > span {
+  margin-bottom: 25px;
+}
+section
+  .main
+  .buyBox
+  .buyBox-inner-up
+  .prise
+  .goods-type
+  > .goods-size
+  > .little-size {
+  display: flex;
+  width: 280px;
+  flex-wrap: wrap;
+}
+section
+  .main
+  .buyBox
+  .buyBox-inner-up
+  .prise
+  .goods-type
+  > .goods-size
+  > .little-size
+  > .goods {
+  width: 62px;
+  line-height: 24px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+section
+  .main
+  .buyBox
+  .buyBox-inner-up
+  .prise
+  .goods-type
+  > .goods-size
+  > .little-size
+  > .goods:first-child,
+section
+  .main
+  .buyBox
+  .buyBox-inner-up
+  .prise
+  .goods-type
+  > .goods-size
+  > .little-size
+  > .goods:nth-child(5) {
+  margin-left: 0;
+}
+section .main .buyBox .buyBox-inner-up .prise .goods-type > .goods-count {
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+}
+section .main .buyBox .buyBox-inner-up .prise .goods-type > .goods-count > a {
+  width: 67px;
+  line-height: 36px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+section .main .buyBox .buyBox-inner-up .prise .goods-type > .goods-count > u {
+  width: 184px;
+  line-height: 36px;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+section .main .buyBox .buyBox-inner-up .buyKey {
+  width: 1100px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #4f4f4f;
+  border-bottom: 1px solid #4f4f4f;
+}
+section .main .buyBox .buyBox-inner-up .buyKey > a {
+  width: 1098px;
+  border: 2px solid #fdd900;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 84px;
+  font-size: 26px;
+  color: #fdd900;
+  text-decoration: none;
+}
+section .main .buyBox .buyBox-inner-down {
+  width: 100%;
+  flex-basis: 93px;
+  background-image: url("../image/bgi1.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+section .main .show-pic {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

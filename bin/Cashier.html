@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MoreZhan-收银台</title>
+    <link rel="stylesheet" href="./css/relize.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/Cashier.css">
+    <link rel="stylesheet" href="./css/wrap1.css">
+    <link rel="stylesheet" href="./css/wechat.css">
+    <link rel="stylesheet" href="./css/pay-success.css">
+    <link rel="Shortcut Icon" href="http://pcgnine5c.bkt.clouddn.com/icon-gamepad.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="wrap1">
+        <div class="box1">
+            <div class="top">
+                <h3>收银台</h3>
+                <a href="javascript:;" id="close-box1">x</a>
+            </div>
+            <div class="body">
+                <p id="tip-contents">
+                    <span>请您在新打开的网上银行页面进行支付</span>
+                    <span>支付完成前请不要关闭该窗口！</span>
+                </p>
+                <div class="box2">
+                    <a href="javascript:;" id="pay-done">已完成支付</a>
+                    <a href="javascript:;" id="need-help">支付遇到问题</a>
+                </div>
+            </div>
+            <div class="bottom">
+                <a href="javascript:;" id="change-order">选择其他支付方式</a>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <header>
+            <div class="header-main">
+                <a href="javascript:;"></a>
+                <a href="../index.html"></a>
+                <div class="login">
+                    <a href="javascript:;"></a>
+                    <a href="./Shopping Cart.html"></a>
+                    <div class="tologin">
+                        <a href="javascript:;">登录</a> /
+                        <a href="javascript:;">注册</a>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="main">
+                <div class="ShoppingCart-process">
+                    <div class="ShoppingCart-processUp">
+                        <h3>收银台
+                        </h3>
+                        <div class="processing">
+                            <span>购物车</span>
+                            <span>填写订单</span>
+                            <span>付款，购买成功</span>
+                        </div>
+                    </div>
+                    <div class="ShoppingCart-processDown"></div>
+                </div>
+                <div class="shoppingCart-main">
+                    <div class="shoppingCart-main-head">
+                        <div class="shoppingCart-main-head-left">
+                            <b>订单提交成功，请尽快付款！</b>
+                            <span>请您在提交订单后
+                                <u>24小时</u>内完成支付，否则订单会自动取消。
+                            </span>
+                        </div>
+                        <div class="shoppingCart-main-head-right">
+                            <span>应付金额:</span>
+                            <span>￥168.00</span>
+                        </div>
+                    </div>
+                    <div class="shoppingCart-main-body">
+                        <div class="shoppingCart-main-body-Up">
+                            <b>订单号 ：12345678912345</b>
+                            <ul>
+                                <li>
+                                    <span>迪里木拉提</span>
+                                    <span>186 **** 0734</span>
+                                </li>
+                                <li>新疆维吾尔自治区伊犁哈萨克自治州奎屯市乌鲁木齐西路56园72幢1单元1103号</li>
+                            </ul>
+                        </div>
+                        <div class="shoppingCart-main-body-Down">
+                            <b>选择支付方式</b>
+                            <div class="check-box">
+                                <input type="checkbox" id="apail-to-pay">
+                                <label for="apail-to-pay">
+                                    <img src="./images/apail_18.jpg" alt="">
+                                </label>
+                            </div>
+                            <div class="check-box">
+                                <input type="checkbox" id="wechat-to-pay">
+                                <label for="wechat-to-pay">
+                                    <img src="./images/wechat-pay_18.jpg" alt="">
+                                </label>
+                            </div>
+                            <div class="check-box">
+                                <input type="checkbox" id="tencent-to-pay">
+                                <label for="tencent-to-pay">
+                                    <img src="./images/tencent-pay_24.jpg" alt="">
+                                </label>
+                            </div>
+                            <div class="check-box">
+                                <input type="checkbox" id="unionpay-to-pay">
+                                <label for="unionpay-to-pay">
+                                    <img src="./images/UnionPay_24.jpg" alt="">
+                                </label>
+                            </div>
+
+                        </div>
+
+                        <div class="shoppingCart-main-body-Down-wechat">
+                            <span>微信支付</span>
+                            <div class="code-box">
+                                <p>距离二维码过期还剩
+                                    <span id="timeer">60秒</span>
+                                </p>
+                                <p> 过期后请刷新页面重新获取二维码
+                                </p>
+                                <div class="vx-wrap">
+                                    <a href="javascript:;" id="refresh">刷新</a>
+                                </div>
+                                <img src="./images/wechat-pay-code_06.jpg" alt="" id="show-vxcode">
+                                <u>
+                                    <span> 请使用微信扫一扫</span>
+                                    <span> 扫描二维码支付!</span>
+                                </u>
+                                <a href="javascript:;" id="checked-order-pay">选择其他支付方式</a>
+                            </div>
+                            <img src="./images/wechat-pay-tips_06.jpg" alt="">
+                        </div>
+
+                    </div>
+                    <div class="shoppingCart-main-foot">
+                        <a href="javascript:;" id="payment">付款</a>
+
+                    </div>
+
+                </div>
+
+                <div class="shoppingCart-main-success">
+                    <img src="./images/pay-seccuess_03.jpg" alt="">
+                    <div class="shoppingCart-main-success-article">
+                        <div class="article-up">
+                            <b>支付成功！</b>
+                        </div>
+                        <div class="article-down">
+                            <ul>
+                                <li>订单号：
+                                    <span>123456789012345</span>
+                                </li>
+                                <li>成功支付：￥168.00</li>
+                            </ul>
+                            <div class="box3">
+                                <a href="../index.html">继续逛逛</a>
+                                <a href="javascript:;">查看订单</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+        <footer>
+            <div class="footer-up ">
+                <div class="footer-up-main ">
+                    <div class="help ">
+                        <h4>帮助信息</h4>
+                        <ul>
+                            <li>
+                                <img src="./images/Inco1_15.jpg " alt=" ">
+                                <a href="javascript:; "> 购物指南</a>
+                            </li>
+                            <li>
+                                <img src="./images/Inco5_15.jpg " alt=" ">
+                                <a href="javascript:; "> 服务中心</a>
+                            </li>
+                            <li>
+                                <img src="./images/Inco2_18.jpg " alt=" ">
+                                <a href="javascript:; "> 支付方式</a>
+                            </li>
+                            <li>
+                                <img src="./images/Inco6_18.jpg " alt=" ">
+                                <a href="javascript:; "> 关于我们</a>
+                            </li>
+                            <li>
+                                <img src="./images/Inco3_18.jpg " alt=" ">
+                                <a href="javascript:; "> 配送方式</a>
+                            </li>
+                            <li>
+                                <img src="./images/Inco7_18.jpg " alt=" ">
+                                <a href="javascript:; "> 免责条款</a>
+                            </li>
+                            <li>
+                                <img src="./images/Inco4_18.jpg " alt=" ">
+                                <a href="javascript:; "> 售后服务</a>
+                            </li>
+                            <li>
+                                <img src="./images/Inco8_18.jpg " alt=" ">
+                                <a href="javascript:; "> 友情链接</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="aboutUs ">
+                        <h4>关注我们</h4>
+                        <div class="about-code ">
+                            <div class="showpic ">
+                                <img src="./images/taobao-code_15.jpg " alt=" ">
+                                <img class="img1 " src="./images/taobao-inco_19.jpg " alt=" ">
+                            </div>
+                            <div class="showpic ">
+                                <img src="./images/wechat-code_15.jpg " alt=" ">
+                                <img class="img1 " src="./images/wechat-inco_19.jpg " alt=" ">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hotline ">
+                        <h4>客服热线</h4>
+                        <p>
+                            400 113 5353
+                            <span>[ 周一至周五 ：00-18:00 ]</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-down ">
+                <div class="footer-down-main ">
+                    <a href="index.html "></a>
+                    <ul>
+                        <li>北京开普乐科技有限公司©版权所有 Copyright 2015-2025 Morethan.oc All rights reserved.</li>
+                        <li>地址：北京市朝阳区建国路93号院4号楼4层505</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        </div>
+        <script src="./js/Cashier.js"></script>
+</body>
+
+</html>

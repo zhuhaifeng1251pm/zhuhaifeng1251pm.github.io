@@ -1,0 +1,146 @@
+.wrap1 {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 99;
+  display: none;
+}
+.wrap1 .to-login {
+  width: 420px;
+  height: 538px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* box-shadow: 10px 10px 5px #000; */
+  position: fixed;
+  top: 3%;
+  left: 35%;
+  z-index: 1000;
+  /* border: 1px solid #000; */
+}
+.wrap1 .to-login #close {
+  text-decoration: none;
+  color: #000;
+  align-self: flex-end;
+  background-color: #fff;
+  width: 50px;
+  height: 10px;
+}
+.wrap1 .to-login > h3 {
+  background-image: url("../images/login-logo_03.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 190px;
+  height: 61px;
+}
+.wrap1 .to-login .input-box {
+  display: flex;
+  /* align-items: center; */
+  width: 380px;
+  height: 46px;
+  flex-wrap: wrap;
+}
+.wrap1 .to-login .input-box label {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #babec9;
+  background-image: url("../images/login-inco1_07.jpg");
+  background-repeat: no-repeat;
+  background-size: 53%;
+  background-position: 11px 6px;
+}
+.wrap1 .to-login .input-box:nth-child(4) label {
+  background-image: url("../images/login-inco2_07.jpg");
+}
+.wrap1 .to-login .input-box label > img {
+  width: 100%;
+}
+.wrap1 .to-login .input-box input {
+  width: 333px;
+  height: 44px;
+  border-top: 1px solid #babec9;
+  border-bottom: 1px solid #babec9;
+  border-right: 1px solid #babec9;
+  outline: none;
+  padding-left: 10px;
+}
+
+.wrap1 .to-login .input-box input::-webkit-input-placeholder {
+  color: #aab2bd;
+  font-size: 12px;
+}
+.wrap1 .to-login .input-box p {
+  padding-left: 50px;
+  font-size: 14px;
+}
+/*  */
+
+.wrap1 .to-login .input-box {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.wrap1 .to-login .input-box #Txtidcode {
+  width: 200px;
+}
+.wrap1 .to-login .input-box #idcode {
+  width: 78px;
+  height: 30px;
+}
+/*  */
+.wrap1 .to-login > a {
+  width: 380px;
+  height: 46px;
+  background-color: #fff500;
+  font-size: 24px;
+  color: #000;
+  text-align: center;
+  line-height: 46px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.wrap1 .to-login > ul {
+  width: 380px;
+  height: 46px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+}
+.wrap1 .to-login > ul > li {
+  width: 180px;
+  height: 46px;
+}
+.wrap1 .to-login > ul > li > a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #000;
+  line-height: 46px;
+}
+.wrap1 .to-login > ul > li:nth-child(2) {
+  text-align: right;
+}
+.wrap1 .login-option {
+  width: 420px;
+  height: 66px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 33%;
+  left: 35%;
+  background-color: #fff;
+}
+.wrap1 .login-option > a {
+  width: 33px;
+  height: 27px;
+}

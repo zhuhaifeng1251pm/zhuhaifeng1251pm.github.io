@@ -1,0 +1,84 @@
+section .main .shoppingCart-main-success {
+  width: 1100px;
+  height: 655px;
+  margin: 0 auto;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  display: none;
+}
+section .main .shoppingCart-main-success > img {
+  width: 278px;
+  height: 442px;
+}
+section .main .shoppingCart-main-success .shoppingCart-main-success-article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 792px;
+  /* height: 3000px; */
+  align-self: center;
+  margin-bottom: 200px;
+}
+section
+  .main
+  .shoppingCart-main-success
+  .shoppingCart-main-success-article
+  .article-up {
+  font-size: 28px;
+  color: #2c2d31;
+  width: 792px;
+  line-height: 60px;
+}
+section
+  .main
+  .shoppingCart-main-success
+  .shoppingCart-main-success-article
+  .article-down {
+  width: 792px;
+  height: 118px;
+  border-top: 2px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section
+  .main
+  .shoppingCart-main-success
+  .shoppingCart-main-success-article
+  .article-down
+  > ul {
+  width: 240px;
+  list-style: none;
+  height: 60px;
+  color: #2a2d32;
+  font-size: 20xp;
+}
+section
+  .main
+  .shoppingCart-main-success
+  .shoppingCart-main-success-article
+  .article-down
+  > .box3 {
+  width: 452px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+section
+  .main
+  .shoppingCart-main-success
+  .shoppingCart-main-success-article
+  .article-down
+  > .box3
+  > a {
+  width: 220px;
+  line-height: 60px;
+  text-decoration: none;
+  text-align: center;
+  background-color: #fdd900;
+  color: #2d2e33;
+  font-size: 26px;
+}

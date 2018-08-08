@@ -1,0 +1,160 @@
+section
+  .main
+  .shoppingCart-main
+  .shoppingCart-main-body
+  .shoppingCart-main-body-Down-wechat {
+  width: 1100px;
+  height: 817px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: none;
+}
+
+section
+  .main
+  .shoppingCart-main
+  .shoppingCart-main-body
+  .shoppingCart-main-body-Down-wechat
+  > span {
+  width: 110px;
+  line-height: 47px;
+  font-size: 26px;
+  color: #2a2e33;
+  margin-right: 70px;
+}
+
+section
+  .main
+  .shoppingCart-main
+  .shoppingCart-main-body
+  .shoppingCart-main-body-Down-wechat
+  .code-box {
+  width: 264px;
+  height: 390px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 19px;
+  margin-right: 70px;
+  position: relative;
+}
+section
+  .main
+  .shoppingCart-main
+  .shoppingCart-main-body
+  .shoppingCart-main-body-Down-wechat
+  .code-box
+  > p {
+  width: 210px;
+  font-size: 14px;
+  color: #2a2d34;
+  line-height: 10px;
+  text-align: center;
+}
+section
+  .main
+  .shoppingCart-main
+  .shoppingCart-main-body
+  .shoppingCart-main-body-Down-wechat
+  .code-box
+  > img {
+  width: 232px;
+  height: 232px;
+}
+section
+  .main
+  .shoppingCart-main
+  .shoppingCart-main-body
+  .shoppingCart-main-body-Down-wechat
+  .code-box
+  .vx-wrap {
+  width: 232px;
+  height: 232px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  position: absolute;
+  top: 44px;
+  left: 16px;
+  display: none;
+}
+
+section
+  .main
+  .shoppingCart-main
+  .shoppingCart-main-body
+  .shoppingCart-main-body-Down-wechat
+  .code-box
+  .vx-wrap
+  #refresh {
+  width: 50px;
+  line-height: 30px;
+  background-color: red;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+section
+  .main
+  .shoppingCart-main
+  .shoppingCart-main-body
+  .shoppingCart-main-body-Down-wechat
+  .code-box
+  > p
+  > span {
+  color: #f60001;
+}
+section
+  .main
+  .shoppingCart-main
+  .shoppingCart-main-body
+  .shoppingCart-main-body-Down-wechat
+  > img {
+  margin-top: 10px;
+  margin-left: 80px;
+}
+section
+  .main
+  .shoppingCart-main
+  .shoppingCart-main-body
+  .shoppingCart-main-body-Down-wechat
+  .code-box
+  > u {
+  text-decoration: none;
+  width: 234px;
+  height: 59px;
+  background-color: #fdd900;
+  font-size: 14px;
+  color: #000;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section
+  .main
+  .shoppingCart-main
+  .shoppingCart-main-body
+  .shoppingCart-main-body-Down-wechat
+  .code-box
+  > u
+  > span {
+  width: 234px;
+}
+section
+  .main
+  .shoppingCart-main
+  .shoppingCart-main-body
+  .shoppingCart-main-body-Down-wechat
+  .code-box
+  > #checked-order-pay {
+  font-size: 14px;
+  color: #01a0e7;
+  text-decoration: none;
+}

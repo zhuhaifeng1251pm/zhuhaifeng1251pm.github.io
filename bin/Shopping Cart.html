@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MoreZhan-购物车</title>
+    <link rel="stylesheet" href="./css/relize.css">
+    <link rel="stylesheet" href="./css/ShoppingCart.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/public-goods.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/ShoppingCart.css">
+    <link rel="stylesheet" href="./css/testLogin.css">
+    <link rel="stylesheet" href="./css/verify.css">
+    <link rel="Shortcut Icon" href="http://pcgnine5c.bkt.clouddn.com/icon-gamepad.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/jquery.idcode.css" />
+
+</head>
+
+<body>
+    <div class="wrap1">
+        <div class="to-login">
+            <a href="javascript:;" id="close">x</a>
+            <h3></h3>
+            <div class="input-box">
+                <label for="tell-num">
+                </label>
+                <input type="text" id="tell-num" placeholder="     请输入手机号">
+                <p id="tell-num-tips"></p>
+            </div>
+            <div class="input-box">
+                <label for="password">
+                </label>
+                <input type="password" id="password" placeholder="     请输入密码">
+                <p id="password-tips"></p>
+            </div>
+            <div class="input-box">
+
+                <input type="text" id="Txtidcode" class="txtVerification">
+                <span id="idcode"></span>
+
+                <!-- <button type="button" id="check-btn" class="verify-btn">确定</button> -->
+            </div>
+            <a href="javaScript:;" id="check-btn" class="verify-btn">登录</a>
+            <ul>
+                <li>
+                    <a href="javaScript:;">忘记密码？</a>
+                </li>
+                <li>
+                    <a href="javaScript:;">注册</a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="login-option">
+            <a href="javaScript:;">
+                <img src="./images/qq-inco_19.jpg" alt="">
+            </a>
+            <a href="javaScript:;">
+                <img src="./images/VX-inco_19_19.jpg" alt="">
+            </a>
+            <a href="javaScript:;">
+                <img src="./images/vb-inco_19.jpg" alt="">
+            </a>
+
+        </div>
+    </div>
+    <div class="wrap">
+        <header>
+            <div class="header-main">
+                <a href="javascript:;"></a>
+                <a href="../index.html"></a>
+                <div class="login">
+                    <a href="javascript:;"></a>
+                    <a href="./Shopping Cart.html"></a>
+                    <div class="tologin">
+                        <a href="javascript:;">登录</a> /
+                        <a href="javascript:;">注册</a>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="main">
+                <div class="ShoppingCart-process">
+                    <div class="ShoppingCart-processUp">
+                        <h3>购物车
+                            <span>[
+
+                                <u id="top-count">0</u>
+                                件 ]</span>
+                        </h3>
+                        <div class="processing">
+                            <span>购物车</span>
+                            <span>填写订单</span>
+                            <span>付款，购买成功</span>
+                        </div>
+                    </div>
+                    <div class="ShoppingCart-processDown"></div>
+                </div>
+                <div class="shoppingCart-main">
+                    <div class="shoppingCart-main-head">
+                        <div class="left">
+                            <input type="checkbox" id="allGoods" class="allChecked">
+                            <label for="allGoods">全选</label>
+
+                            <span>商品</span>
+                        </div>
+                        <div class="right">
+                            <span>单价</span>
+                            <span>数量</span>
+                            <span>小计</span>
+                            <span>操作</span>
+                        </div>
+                    </div>
+                    <div class="shoppingCart-main-body">
+                        <ul>
+                            <li class="goods-detailed">
+                                <div class="shoppingCart-main-body-left">
+                                    <input type="checkbox" id="goods0" class="goodss">
+                                    <label for="goods0"></label>
+                                    <a href="javascript:;">
+                                        <img src=".//images/people1_32.jpg" alt="">
+                                    </a>
+                                    <article>
+                                        <p>龙之谷六周年限定礼包大Boos冰龙款男士T恤</p>
+                                        <p>款式：iphone5</p>
+                                        <p>尺码：XL</p>
+                                    </article>
+                                </div>
+                                <div class="shoppingCart-main-body-right">
+                                    <span>￥79.00</span>
+                                    <div class="calc-counts">
+                                        <a href="javascript:;" class="add">+</a>
+                                        <span class="goods-counts">1</span>
+                                        <a href="javascript:;" class="reduce">-</a>
+                                    </div>
+                                    <u class="small-plan">￥79.00</u>
+
+                                    <div class="isORno-delete">
+                                        <a href="javaScript:;" class="isdelete">
+                                            <img src="./images/isdelete_06.jpg" alt=""> </a>
+                                        <a href="javascript:;" class="isnodelete">
+                                            <img src="./images/isnodelete_03.jpg" alt=""> </a>
+                                    </div>
+                                    <a href="javascript:;" class="deleteBtn">x</a>
+                                </div>
+                            </li>
+                            <li class="goods-detailed">
+                                <div class="shoppingCart-main-body-left">
+                                    <input type="checkbox" id="goods1" class="goodss">
+                                    <label for="goods1"></label>
+                                    <a href="javascript:;">
+                                        <img src=".//images/people1_32.jpg" alt="">
+                                    </a>
+                                    <article>
+                                        <p>龙之谷六周年限定礼包大Boos冰龙款男士T恤</p>
+                                        <p></p>
+                                        <p></p>
+                                    </article>
+                                </div>
+                                <div class="shoppingCart-main-body-right">
+                                    <span>￥79.00</span>
+                                    <div class="calc-counts">
+                                        <a href="javascript:;" class="add">+</a>
+                                        <span class="goods-counts">1</span>
+                                        <a href="javascript:;" class="reduce">-</a>
+                                    </div>
+                                    <u class="small-plan">￥79.00</u>
+                                    <div class="isORno-delete">
+                                        <a href="javaScript:;" class="isdelete">
+                                            <img src="./images/isdelete_06.jpg" alt=""> </a>
+                                        <a href="javascript:;" class="isnodelete">
+                                            <img src="./images/isnodelete_03.jpg" alt=""> </a>
+                                    </div>
+                                    <a href="javascript:;" class="deleteBtn">x</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="shoppingCart-main-foot">
+                        <div class="shoppingCart-main-foot-left">
+                            <input type="checkbox" id="allGoods0" class="allChecked">
+                            <label for="allGoods0">全选</label>
+                            <a href="javaScript:;" class="checked-delete">删除</a>
+                            <a href="javascript:;">转到愿望单</a>
+                            <p>共
+                                <span id="total-counts">4</span> 件商品，已选择
+                                <span id="checked-counts">1</span> 件
+                            </p>
+                            <div class="is-checked-del">
+                                <a href="javaScript:;" class="is-checked-del-is">
+                                    <img src="./images/isisi_20.jpg" alt="">
+                                </a>
+                                <a href="javascript:;" class="is-checked-del-no ">
+                                    <img src="./images/Isnodelete_20.jpg " alt=" ">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="shoppingCart-main-foot-right ">
+                            <ul>
+                                <li>合计:</li>
+                                <li>[不含运费]</li>
+                            </ul>
+                            <span id="total-price">￥79.00</span>
+                            <a href="javaScript:; " id="to-pay">去结算</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-up ">
+                <div class="footer-up-main ">
+                    <div class="help ">
+                        <h4>帮助信息</h4>
+                        <ul>
+                            <li>
+                                <img src="./images/Inco1_15.jpg " alt=" ">
+                                <a href="javascript:; "> 购物指南</a>
+                            </li>
+                            <li>
+                                <img src="./images/Inco5_15.jpg " alt=" ">
+                                <a href="javascript:; "> 服务中心</a>
+                            </li>
+                            <li>
+                                <img src="./images/Inco2_18.jpg " alt=" ">
+                                <a href="javascript:; "> 支付方式</a>
+                            </li>
+                            <li>
+                                <img src="./images/Inco6_18.jpg " alt=" ">
+                                <a href="javascript:; "> 关于我们</a>
+                            </li>
+                            <li>
+                                <img src="./images/Inco3_18.jpg " alt=" ">
+                                <a href="javascript:; "> 配送方式</a>
+                            </li>
+                            <li>
+                                <img src="./images/Inco7_18.jpg " alt=" ">
+                                <a href="javascript:; "> 免责条款</a>
+                            </li>
+                            <li>
+                                <img src="./images/Inco4_18.jpg " alt=" ">
+                                <a href="javascript:; "> 售后服务</a>
+                            </li>
+                            <li>
+                                <img src="./images/Inco8_18.jpg " alt=" ">
+                                <a href="javascript:; "> 友情链接</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="aboutUs ">
+                        <h4>关注我们</h4>
+                        <div class="about-code ">
+                            <div class="showpic ">
+                                <img src="./images/taobao-code_15.jpg " alt=" ">
+                                <img class="img1 " src="./images/taobao-inco_19.jpg " alt=" ">
+                            </div>
+                            <div class="showpic ">
+                                <img src="./images/wechat-code_15.jpg " alt=" ">
+                                <img class="img1 " src="./images/wechat-inco_19.jpg " alt=" ">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hotline ">
+                        <h4>客服热线</h4>
+                        <p>
+                            400 113 5353
+                            <span>[ 周一至周五 ：00-18:00 ]</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-down ">
+                <div class="footer-down-main ">
+                    <a href="index.html "></a>
+                    <ul>
+                        <li>北京开普乐科技有限公司©版权所有 Copyright 2015-2025 Morethan.oc All rights reserved.</li>
+                        <li>地址：北京市朝阳区建国路93号院4号楼4层505</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/jquery.idcode.js"></script>
+    <script src="./js/shoppingCart.js "></script>
+
+</body>
+
+</html>

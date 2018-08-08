@@ -1,0 +1,90 @@
+section .main .shoppingCart-main {
+  width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+section .main .shoppingCart-main .shoppingCart-main-head {
+  display: flex;
+  justify-content: space-between;
+  height: 46px;
+}
+section .main .shoppingCart-main .shoppingCart-main-head > .left {
+  display: flex;
+  width: 130px;
+  line-height: 46px;
+  position: relative;
+  justify-content: space-between;
+}
+
+section
+  .main
+  .shoppingCart-main
+  .shoppingCart-main-head
+  > .left
+  input[type='checkbox'] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+section .main .shoppingCart-main .shoppingCart-main-head > .left > label {
+  padding-left: 36px;
+}
+section
+  .main
+  .shoppingCart-main
+  .shoppingCart-main-head
+  > .left
+  > label::before {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #babec9;
+  /* background-color: #fff; */
+  border-radius: 3px;
+  position: absolute;
+  top: 12px;
+  left: 0;
+}
+section
+  .main
+  .shoppingCart-main
+  .shoppingCart-main-head
+  > .left
+  input:checked
+  ~ label::before {
+  background-image: url('../images/checked_32.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+section
+  .main
+  .shoppingCart-main
+  .shoppingCart-main-head
+  > .left
+  input:checked
+  ~ label {
+  background-color: #fff;
+}
+section .main .shoppingCart-main .shoppingCart-main-head .right {
+  width: 532px;
+  line-height: 46px;
+  display: flex;
+  /* justify-content: space-between; */
+}
+section .main .shoppingCart-main .shoppingCart-main-head .right > span {
+  width: 30px;
+  text-align: center;
+  flex-grow: 23;
+}
+section
+  .main
+  .shoppingCart-main
+  .shoppingCart-main-head
+  .right
+  > span:last-child {
+  flex-grow: 1;
+  margin-right: 17px;
+}
