@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/remarks.css">
     <link rel="stylesheet" href="./css/add-Newaddress.css">
+    <link rel="stylesheet" href="./css/edit.css">
     <link rel="Shortcut Icon" href="http://pcgnine5c.bkt.clouddn.com/icon-gamepad.png" type="image/x-icon">
 </head>
 
@@ -108,6 +109,94 @@
         </div>
     </div>
 
+    <div class="wrap2">
+        <div class="toAdd-address2">
+            <div class="toAdd-address-head2">
+                <b>编辑地址</b>
+                <a href="javajscript:;" id="close-toAdd-address2">x</a>
+            </div>
+            <div class="toAdd-address-body2">
+                <ul>
+                    <li>
+                        <div class="left-box2">
+                            <div class="title-box2">
+                                <span>
+                                    <u>*</u> 收货人</span>
+                                <span class="error2" id="error-consignee2">请填写收货人！</span>
+                            </div>
+                            <input type="text" id="consignee2">
+                        </div>
+                        <div class="right-box2">
+                            <div class="title-box2">
+                                <span>
+                                    <u>*</u> 联系电话</span>
+                                <span class="error2" id="error-contact-number2">填写的手机号格式错误！</span>
+                            </div>
+                            <input type="text" id="contact-number2">
+                        </div>
+
+                    </li>
+                    <li>
+                        <div class="title-box2">
+                            <span>
+                                <u>*</u> 所在地区</span>
+                            <span class="error2" id="error-selector2">请填写完整的所在地区！</span>
+                        </div>
+                        <div class="selector2">
+                            <select class="form-control" id="cmbProvince2" name="cmbProvince2">
+                            </select>
+                            <select class="form-control" id="cmbCity2" name="cmbCity2">
+                                <option value=""></option>
+                            </select>
+                            <select class="form-control" id="cmbArea2" name="cmbArea2">
+                                <option value=""></option>
+                            </select>
+                        </div>
+
+                    </li>
+                    <li>
+                        <div class="title-box2">
+                            <span>
+                                <u>*</u> 详细地址</span>
+                            <span class="error2" id="error-detailed-address2">请填写详细地址！</span>
+                        </div>
+                        <input type="text" id="detailed-address2" placeholder=" 请填写详细地址">
+                    </li>
+                    <li>
+                        <div class="otherName-left2">
+                            <label for="">地址别名</label>
+                            <input type="text" id="address-ortherName2">
+                        </div>
+                        <div class="otherName-right2">
+                            <span>常用别名</span>
+                            <div class="select-types2">
+                                <a href="javaScript:;" id="is-home2" class="is-what2">
+                                    <input type="checkbox" id="is-what-home2">
+                                    <label for="is-what-home2">家</label>
+                                </a>
+                                <a href="javaScript:;" id="is-company2" class="is-what2">
+                                    <input type="checkbox" id="is-what-company2">
+                                    <label for="is-what-company2">公司</label>
+                                </a>
+                                <a href="javaScript:;" id="is-parents2" class="is-what2">
+                                    <input type="checkbox" id="is-what-parents2">
+                                    <label for="is-what-parents2">父母家</label>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="set-address2">
+                            <input type="checkbox" id="set-toIs2">
+                            <label for="set-toIs2">设为默认地址</label>
+                        </div>
+                        <a href="javajscript:;" id="address-saveBtn2">保存地址</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
 
 
     <div class="wrap">
@@ -148,12 +237,21 @@
                         </div>
                         <div class="shoppingCart-main-head-content">
                             <ul id="addressAll">
-                                <li class="contact-address">
+                                <li class="contact-address" id="li0">
 
                                     <ul>
-                                        <li>阿不来提·阿不都热西提</li>
-                                        <li>新建维吾尔自治区博尔塔拉蒙古自治州塔格特90团乎热郭木村9连5区13号</li>
-                                        <li>186 **** 5149</li>
+                                        <li>
+                                            <span class="people-name">阿不来提·阿不都热西提</span>
+                                            >>>>>>
+                                            <b class="address-type123"></b>
+                                        </li>
+                                        <li>
+                                            <span class="province">新建维吾尔自治区</span>
+                                            <span class="city">博尔塔拉蒙古自治州</span>
+                                            <span class="area">塔格特90团</span>
+                                            <span class="detailedADss">乎热郭木村9连5区13号</span>
+                                        </li>
+                                        <li class="tellphone">186 **** 5149</li>
                                     </ul>
                                     <input type="checkbox" id="address0" class="contact-address-checkbox">
                                     <label for="address0"></label>
@@ -162,7 +260,8 @@
                                             <img src="./images/isdelete_06.jpg" alt=""> </a>
                                         <a href="javascript:;" class="isnodelete">
                                             <img src="./images/isnodelete_03.jpg" alt=""> </a>
-                                    </div>
+                                    </div>别名：
+                                    <span class="others-names"></span>
                                     <div class="buttons">
                                         <a href="javascript:;" class="default">设为默认</a>
                                         <a href="javascript:;" class="edit">编辑</a>
@@ -170,12 +269,21 @@
                                     </div>
 
                                 </li>
-                                <li class="contact-address">
+                                <li class="contact-address" id="li1">
 
                                     <ul>
-                                        <li>买买提·艾力</li>
-                                        <li>新疆维吾尔族自治区伊犁州新源县那拉提镇农场科勒布拉克村二组</li>
-                                        <li>159 **** 1136</li>
+                                        <li>
+                                            <span class="people-name">买买提·艾力</span>
+                                            >>>>>>
+                                            <b class="address-type123"></b>
+                                        </li>
+                                        <li>
+                                            <span class="province">新疆维吾尔族自治区</span>
+                                            <span class="city">伊犁州</span>
+                                            <span class="area">新源县</span>
+                                            <span class="detailedADss">那拉提镇农场科勒布拉克村二组</span>
+                                        </li>
+                                        <li class="tellphone">159 **** 1136</li>
                                     </ul>
                                     <input type="checkbox" id="address1" class="contact-address-checkbox">
                                     <label for="address1"></label>
@@ -184,19 +292,29 @@
                                             <img src="./images/isdelete_06.jpg" alt=""> </a>
                                         <a href="javascript:;" class="isnodelete">
                                             <img src="./images/isnodelete_03.jpg" alt=""> </a>
-                                    </div>
+                                    </div>别名：
+                                    <span class="others-names"></span>
                                     <div class="buttons">
                                         <a href="javascript:;" class="default">默认</a>
                                         <a href="javascript:;" class="edit">编辑</a>
                                         <a href="javascript:;" class="delBtn">删除</a>
                                     </div>
                                 </li>
-                                <li class="contact-address">
+                                <li class="contact-address" id="li2">
 
                                     <ul>
-                                        <li>迪里木拉提</li>
-                                        <li>新疆维吾尔自治区伊犁哈萨克自治州奎屯市乌鲁木齐西路56园72幢1单元1103号</li>
-                                        <li>186 **** 0734</li>
+                                        <li>
+                                            <span class="people-name">迪里木拉提</span>
+                                            >>>>>>
+                                            <b class="address-type123"></b>
+                                        </li>
+                                        <li>
+                                            <span class="province">新疆维吾尔自治区</span>
+                                            <span class="city">伊犁哈萨克自治州</span>
+                                            <span class="area">奎屯市</span>
+                                            <span class="detailedADss">乌鲁木齐西路56园72幢1单元1103号</span>
+                                        </li>
+                                        <li class="tellphone">186 **** 0734</li>
                                     </ul>
                                     <input type="checkbox" id="address2" class="contact-address-checkbox">
                                     <label for="address2"></label>
@@ -205,7 +323,8 @@
                                             <img src="./images/isdelete_06.jpg" alt=""> </a>
                                         <a href="javascript:;" class="isnodelete">
                                             <img src="./images/isnodelete_03.jpg" alt=""> </a>
-                                    </div>
+                                    </div>别名：
+                                    <span class="others-names"></span>
                                     <div class="buttons">
                                         <a href="javascript:;" class="default">设为默认</a>
                                         <a href="javascript:;" class="edit">编辑</a>
@@ -458,6 +577,7 @@
     </div>
     <script src="./js/placeorder.js"></script>
     <script src="./js/add-Newaddress.js"></script>
+    <script src="./js/edit.js"></script>
 
 </body>
 
