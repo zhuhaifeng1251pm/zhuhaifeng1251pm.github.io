@@ -74,28 +74,15 @@ for (var i = 0; i < isnodeleteArrs.length; i++) {
 }
 //取消删除-结束
 //加载更多的地址信息-开始
+var numssss = 99;
 document.getElementById("to-show-more").onclick = function() {
   var newLi = document.createElement("li");
+
+  numssss++;
   newLi.className = "contact-address";
-  newLi.innerHTML = ` <ul>
-  <li>阿不来提·阿不都热西提</li>
-  <li>新建维吾尔自治区博尔塔拉蒙古自治州塔格特90团乎热郭木村9连5区13号</li>
-  <li>186 **** 5149</li>
-</ul>
-<input type="checkbox" id="address0" class="contact-address-checkbox">
-<label for="address0"></label>
-<div class="isORno-delete">
-  <a href="javaScript:;" class="isdelete">
-      <img src="./images/isdelete_06.jpg" alt=""> </a>
-  <a href="javascript:;" class="isnodelete">
-      <img src="./images/isnodelete_03.jpg" alt=""> </a>
-</div>
-<div class="buttons">
-  <a href="javascript:;" class="default">设为默认</a>
-  <a href="javascript:;" class="edit">编辑</a>
-  <a href="javascript:;" class="delBtn">删除</a>
-</div>
-`;
+  newLi.id = "Li" + numssss;
+  newLi.innerHTML = `<ul><li><span class="people-name">迪里木拉提</span>>>>>>><b class="address-type123"></b></li><li><span class="province">新疆维吾尔自治区</span><span class="city">伊犁哈萨克自治州</span><span class="area">奎屯市</span><span class="detailedADss">乌鲁木齐西路56园72幢1单元1103号</span></li><li class="tellphone">186 **** 0734</li></ul>
+  <input type="checkbox" id="address2" class="contact-address-checkbox"><label for="address2"></label><div class="isORno-delete"><a href="javaScript:;" class="isdelete"><img src="./images/isdelete_06.jpg" alt=""> </a><a href="javascript:;" class="isnodelete"><img src="./images/isnodelete_03.jpg" alt=""> </a></div>别名：<span class="others-names"></span><div class="buttons"><a href="javascript:;" class="default">设为默认</a><a href="javascript:;" class="edit">编辑</a><a href="javascript:;" class="delBtn">删除</a></div>`;
   document.getElementById("addressAll").appendChild(newLi);
 };
 document.getElementById("back-shoppingcar").onclick = function() {
@@ -176,13 +163,20 @@ document.getElementById("to-pay").onclick = function() {
     alert(1);
   }
 };
-
+var contentss = "";
 document.getElementById("saveBtn").onclick = function() {
   var status0 = document.getElementById("transport").checked;
   var status1 = document.getElementById("pay-checked").checked;
   if (status0 === true && status1 === true) {
     document.querySelector(".box1").style.display = "none";
+    contentss = document.getElementById("remarkss0").querySelector("textarea")
+      .value;
+    console.log(contentss);
+
     document.getElementById("save-alert").onclick = function() {
+      document
+        .getElementById("remarkss1")
+        .querySelector("textarea").value = contentss;
       document.querySelector(".shoppingCart-main-foot-start").style.display =
         "none";
       document.querySelector(".shoppingCart-main-foot").style.display = "flex";
@@ -194,9 +188,6 @@ document.getElementById("saveBtn").onclick = function() {
       alert("请选择物流方式");
     }
   }
-  document.querySelector("remarks-box1").innerText = document.querySelector(
-    "remarks-box"
-  ).innerText;
 };
 document.getElementById("save-alert").onclick = function() {
   document.querySelector(".box1").style.display = "block";
