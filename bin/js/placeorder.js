@@ -194,6 +194,9 @@ document.getElementById("saveBtn").onclick = function() {
       alert("请选择物流方式");
     }
   }
+  document.querySelector("remarks-box1").innerText = document.querySelector(
+    "remarks-box"
+  ).innerText;
 };
 document.getElementById("save-alert").onclick = function() {
   document.querySelector(".box1").style.display = "block";
