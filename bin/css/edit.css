@@ -273,7 +273,7 @@
   > .is-what2
   input:checked
   ~ label::before {
-  background-image: url("../images/address-checked_43.jpg");
+  background-image: url("../images/checked_32.jpg");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -335,7 +335,7 @@
   .set-address2
   input:checked
   ~ label::before {
-  background-image: url("../images/address-checked_43.jpg");
+  background-image: url("../images/checked_32.jpg");
   background-repeat: no-repeat;
   background-size: contain;
 }

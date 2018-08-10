@@ -2423,7 +2423,7 @@ for (var i = 0; i < document.querySelectorAll(".edit").length; i++) {
         ]
       },
       {
-        name: "新疆",
+        name: "新疆维吾尔自治区",
         cityList: [
           {
             name: "乌鲁木齐市",
@@ -4767,14 +4767,6 @@ for (var i = 0; i < document.querySelectorAll(".edit").length; i++) {
         cityList: []
       }
     ];
-    addressInit(
-      "cmbProvince2",
-      "cmbCity2",
-      "cmbArea2",
-      provincee,
-      citye,
-      areae
-    );
     document.querySelector(".wrap2").style.display = "flex";
     var LiId = this.parentNode.parentNode.id;
     console.log(LiId);
@@ -4786,75 +4778,39 @@ for (var i = 0; i < document.querySelectorAll(".edit").length; i++) {
     var provincee = this.parentNode.parentNode.querySelector(".province")
       .innerText;
     var citye = this.parentNode.parentNode.querySelector(".city").innerText;
+
     var areae = this.parentNode.parentNode.querySelector(".area").innerText;
     var detailedADsse = this.parentNode.parentNode.querySelector(
       ".detailedADss"
     ).innerText;
     var othersnamese = this.parentNode.parentNode.querySelector(".others-names")
       .innerText;
+    addressInit(
+      "cmbProvince2",
+      "cmbCity2",
+      "cmbArea2",
+      provincee,
+      citye,
+      areae
+    );
     document.getElementById("address-ortherName2").value = othersnamese;
     document.getElementById("consignee2").value = peoplee;
     document.getElementById("contact-number2").value = tellphonee;
     document.getElementById("detailed-address2").value = detailedADsse;
-    var Province2 = document.getElementById("cmbProvince2").value;
-    var City2 = document.getElementById("cmbCity2").value;
-    var Area2 = document.getElementById("cmbArea2").value;
-    document.getElementById("address-saveBtn2").onclick = function() {
-      alert(1);
 
+    document.getElementById("address-saveBtn2").onclick = function() {
       console.log(document.getElementById(LiId));
       var isLiId = document.getElementById(LiId);
 
-      // if (
-      //   people.trim() !== "" &&
-      //   tellNumber.trim() !== "" &&
-      //   detailedAddress.trim() !== ""
-      // ) {
-      //   if (re.test(tellNumber)) {
-      //     document.querySelector(".wrap2").style.display = "none";
-      //     alert("保存成功!!!");
-      //     var arrs = document.querySelectorAll(".contact-address");
-      //     for (var i = 0; i < arrs.length; i++) {
-      //       arrs[i].onclick = function() {
-      //         var nums = this.parentNode.querySelectorAll(".contact-address");
-      //         for (var j = 0; j < nums.length; j++) {
-      //           nums[j].style.borderColor = "#fff";
-      //           nums[j].style.borderBottom = "1px solid #ccc";
-      //           nums[j].style.paddingBottom = "2px";
-      //           nums[j].querySelector(
-      //             ".contact-address-checkbox"
-      //           ).checked = false;
-      //         }
-      //         this.style.borderColor = "#fdd901";
-      //         this.style.borderBottomWidth = "3px";
-      //         this.style.paddingBottom = 0;
-      //         this.querySelector(".contact-address-checkbox").checked = true;
-      //       };
-      //     }
+      console.log(
+        document.getElementById("consignee2").value.trim() !== "" &&
+          document.getElementById("contact-number2").value.trim() !== "" &&
+          document.getElementById("detailed-address2").value.trim() !== ""
+      );
 
-      // var defaultArrs = document.querySelectorAll(".default");
-      // for (var i = 0; i < defaultArrs.length; i++) {
-      //   defaultArrs[i].onclick = function(ev) {
-      //     var oEvent = ev || event;
-      //     oEvent.cancelBubble = true;
-      //     oEvent.stopPropagation();
-      //     var defaultnums = this.parentNode.parentNode.parentNode.querySelectorAll(
-      //       ".default"
-      //     );
-      //     for (var j = 0; j < defaultArrs.length; j++) {
-      //       defaultArrs[j].style.color = "#58595d";
-      //       defaultArrs[j].style.backgroundColor = "#fff";
-      //       defaultArrs[j].innerText = "设为默认";
-      //     }
-      //     this.style.color = "#fff";
-      //     this.style.backgroundColor = "#2b2e33";
-      //     this.innerText = "默认";
-      //   };
-      // }
-      //   }
-      // } else {
-      //   alert("必填项不能为空！！！");
-      // }
+      var Province2 = document.getElementById("cmbProvince2").value;
+      var City2 = document.getElementById("cmbCity2").value;
+      var Area2 = document.getElementById("cmbArea2").value;
       document
         .getElementById("cmbProvince2")
         .addEventListener("change", function() {
@@ -4870,25 +4826,130 @@ for (var i = 0; i < document.querySelectorAll(".edit").length; i++) {
         .addEventListener("change", function() {
           Area2 = document.getElementById("cmbArea2").value;
         });
+      if (
+        document.getElementById("consignee2").value.trim() !== "" &&
+        document.getElementById("contact-number2").value.trim() !== "" &&
+        document.getElementById("detailed-address2").value.trim() !== ""
+      ) {
+        var re = /^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\d{8}$/;
+        if (re.test(document.getElementById("contact-number2").value)) {
+          isLiId.querySelector(".province").innerText = Province2;
+          isLiId.querySelector(".city").innerText = City2;
+          isLiId.querySelector(".area").innerText = Area2;
+          isLiId.querySelector(
+            ".others-names"
+          ).innerText = document.getElementById("address-ortherName2").value;
+          isLiId.querySelector(
+            ".people-name"
+          ).innerText = document.getElementById("consignee2").value;
+          isLiId.querySelector(
+            ".tellphone"
+          ).innerText = document.getElementById("contact-number2").value;
+          isLiId.querySelector(
+            ".detailedADss"
+          ).innerText = document.getElementById("detailed-address2").value;
+          var status = document.getElementById("set-toIs2").checked;
+          var defaultnums1 = isLiId.querySelector(".default");
+          if (status) {
+            var defaultArrs = document.querySelectorAll(".default");
 
-      isLiId.querySelector(".province").innerText = Province2;
-      isLiId.querySelector(".city").innerText = City2;
-      isLiId.querySelector(".area").innerText = Area2;
-      isLiId.querySelector(".others-names").innerText = document.getElementById(
-        "address-ortherName2"
-      ).value;
-      isLiId.querySelector(".people-name").innerText = document.getElementById(
-        "consignee2"
-      ).value;
-      isLiId.querySelector(".tellphone").innerText = document.getElementById(
-        "contact-number2"
-      ).value;
-      isLiId.querySelector(".detailedADss").innerText = document.getElementById(
-        "detailed-address2"
-      ).value;
+            for (var i = 0; i < defaultArrs.length; i++) {
+              defaultArrs[i].style.color = "#58595d";
+              defaultArrs[i].style.backgroundColor = "#fff";
+              defaultArrs[i].innerText = "设为默认";
+            }
+            defaultnums1.style.color = "#fff";
+            defaultnums1.style.backgroundColor = "#2b2e33";
+            defaultnums1.innerText = "默认";
+          }
+          var status3 = document.getElementById("is-what-home2").checked;
+          var status4 = document.getElementById("is-what-company2").checked;
+          var status5 = document.getElementById("is-what-parents2").checked;
+          if (status3) {
+            isLiId.querySelector(".address-type123").innerText = "类：家";
+          } else if (status4) {
+            isLiId.querySelector(".address-type123").innerText = "类：公司";
+          } else if (status5) {
+            isLiId.querySelector(".address-type123").innerText = "类：父母家";
+          } else {
+            isLiId.querySelector(".address-type123").innerText = "";
+          }
+          alert("保存成功！");
+        } else {
+          alert("手机号码格式不正确！");
+        }
+      } else {
+        alert("您有必填项为填，请填完才能保存！");
+      }
     };
   };
 }
+
 document.getElementById("close-toAdd-address2").onclick = function() {
   document.querySelector(".wrap2").style.display = "none";
+};
+document.getElementById("contact-number2").onblur = function() {
+  var arrs = this.value;
+  var re = /^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\d{8}$/;
+  if (!re.test(arrs)) {
+    document.getElementById("error-contact-number2").style.display = "block";
+  } else {
+    document.getElementById("error-contact-number2").style.display = "none";
+    // contactNumberStr = document.getElementById('consignee').value
+  }
+};
+
+document.getElementById("detailed-address2").onblur = function() {
+  var arrs = this.value;
+  if (arrs.trim() === "") {
+    document.getElementById("error-detailed-address2").style.display = "block";
+  } else {
+    document.getElementById("error-detailed-address2").style.display = "none";
+    // detailedDddressStr = document.getElementById('consignee').value
+  }
+};
+
+document.getElementById("consignee2").onblur = function() {
+  var arrs = this.value;
+  if (arrs.trim() === "") {
+    document.getElementById("error-consignee2").style.display = "block";
+  } else {
+    document.getElementById("error-consignee2").style.display = "none";
+    // consigneeStr = document.getElementById('consignee').value
+  }
+};
+document.getElementById("is-home2").onclick = function() {
+  document.getElementById("is-company2").style.border = "1px solid #bbbfcb";
+  document.getElementById("is-company2").style.padding = "1px";
+  document.getElementById("is-parents2").style.border = "1px solid #bbbfcb";
+  document.getElementById("is-parents2").style.padding = "1px";
+  this.style.border = "2px solid #fdd900";
+  this.style.padding = "0px";
+  document.getElementById("is-what-home2").checked = true;
+  document.getElementById("is-what-company2").checked = false;
+  document.getElementById("is-what-parents2").checked = false;
+};
+
+document.getElementById("is-company2").onclick = function() {
+  document.getElementById("is-home2").style.border = "1px solid #bbbfcb";
+  document.getElementById("is-home2").style.padding = "1px";
+  document.getElementById("is-parents2").style.border = "1px solid #bbbfcb";
+  document.getElementById("is-parents2").style.padding = "1px";
+  this.style.border = "2px solid #fdd900";
+  this.style.padding = "0px";
+  document.getElementById("is-what-home2").checked = false;
+  document.getElementById("is-what-company2").checked = true;
+  document.getElementById("is-what-parents2").checked = false;
+};
+
+document.getElementById("is-parents2").onclick = function() {
+  document.getElementById("is-company2").style.border = "1px solid #bbbfcb";
+  document.getElementById("is-company2").style.padding = "1px";
+  document.getElementById("is-home2").style.border = "1px solid #bbbfcb";
+  document.getElementById("is-home2").style.padding = "1px";
+  this.style.border = "2px solid #fdd900";
+  this.style.padding = "0px";
+  document.getElementById("is-what-home2").checked = false;
+  document.getElementById("is-what-company2").checked = false;
+  document.getElementById("is-what-parents2").checked = true;
 };

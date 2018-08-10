@@ -1,4 +1,4 @@
-document.getElementById("is-home").onclick = function () {
+document.getElementById("is-home").onclick = function() {
   document.getElementById("is-company").style.border = "1px solid #bbbfcb";
   document.getElementById("is-company").style.padding = "1px";
   document.getElementById("is-parents").style.border = "1px solid #bbbfcb";
@@ -10,7 +10,7 @@ document.getElementById("is-home").onclick = function () {
   document.getElementById("is-what-parents").checked = false;
 };
 
-document.getElementById("is-company").onclick = function () {
+document.getElementById("is-company").onclick = function() {
   document.getElementById("is-home").style.border = "1px solid #bbbfcb";
   document.getElementById("is-home").style.padding = "1px";
   document.getElementById("is-parents").style.border = "1px solid #bbbfcb";
@@ -22,7 +22,7 @@ document.getElementById("is-company").onclick = function () {
   document.getElementById("is-what-parents").checked = false;
 };
 
-document.getElementById("is-parents").onclick = function () {
+document.getElementById("is-parents").onclick = function() {
   document.getElementById("is-company").style.border = "1px solid #bbbfcb";
   document.getElementById("is-company").style.padding = "1px";
   document.getElementById("is-home").style.border = "1px solid #bbbfcb";
@@ -34,7 +34,7 @@ document.getElementById("is-parents").onclick = function () {
   document.getElementById("is-what-parents").checked = true;
 };
 
-document.getElementById("contact-number").onblur = function () {
+document.getElementById("contact-number").onblur = function() {
   var arrs = this.value;
   var re = /^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\d{8}$/;
   if (!re.test(arrs)) {
@@ -45,7 +45,7 @@ document.getElementById("contact-number").onblur = function () {
   }
 };
 
-document.getElementById("detailed-address").onblur = function () {
+document.getElementById("detailed-address").onblur = function() {
   var arrs = this.value;
   if (arrs.trim() === "") {
     document.getElementById("error-detailed-address").style.display = "block";
@@ -55,7 +55,7 @@ document.getElementById("detailed-address").onblur = function () {
   }
 };
 
-document.getElementById("consignee").onblur = function () {
+document.getElementById("consignee").onblur = function() {
   var arrs = this.value;
   if (arrs.trim() === "") {
     document.getElementById("error-consignee").style.display = "block";
@@ -65,11 +65,11 @@ document.getElementById("consignee").onblur = function () {
   }
 };
 
-document.getElementById("newAddress").onclick = function () {
+document.getElementById("newAddress").onclick = function() {
   document.querySelector(".wrap1").style.display = "block";
 };
 
-var addressInit = function (
+var addressInit = function(
   _cmbProvince,
   _cmbCity,
   _cmbArea,
@@ -4617,8 +4617,7 @@ var provinceList = [
 
 addressInit("cmbProvince", "cmbCity", "cmbArea");
 
-
-document.getElementById("address-saveBtn").onclick = function () {
+document.getElementById("address-saveBtn").onclick = function() {
   var people = document.getElementById("consignee").value;
   var tellNumber = document.getElementById("contact-number").value;
   var detailedAddress = document.getElementById("detailed-address").value;
@@ -4628,33 +4627,31 @@ document.getElementById("address-saveBtn").onclick = function () {
   var Province = document.getElementById("cmbProvince").value;
   var City = document.getElementById("cmbCity").value;
   var Area = document.getElementById("cmbArea").value;
-  var numms = 3
-  document.getElementById("cmbProvince").addEventListener("change", function () {
+  var numms = 3;
+  document.getElementById("cmbProvince").addEventListener("change", function() {
     Province = document.getElementById("cmbProvince").value;
   });
-  document.getElementById("cmbCity").addEventListener("change", function () {
+  document.getElementById("cmbCity").addEventListener("change", function() {
     City = document.getElementById("cmbCity").value;
   });
-  document.getElementById("cmbArea").addEventListener("change", function () {
+  document.getElementById("cmbArea").addEventListener("change", function() {
     Area = document.getElementById("cmbArea").value;
   });
-  var otherName = document.getElementById('address-ortherName').value
+  var otherName = document.getElementById("address-ortherName").value;
 
   var people = document.getElementById("consignee").value;
   var tellNumber = document.getElementById("contact-number").value;
   var re = /^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\d{8}$/;
-  var addtesss = 'address' + numms
+  var addtesss = "address" + numms;
   var detailedAddress = document.getElementById("detailed-address").value;
   var status3 = document.getElementById("set-toIs").checked;
 
   var newLi = document.createElement("li");
   newLi.className = "contact-address";
+  newLi.id = "Li" + numms;
   if (status3) {
     newLi.innerHTML = `
-  <ul><li>${people} >>>>>><b class="address-type123"></b></li><li>${Province +
-      City +
-      Area +
-      detailedAddress}</li><li>${tellNumber}</li></ul><input type="checkbox" id="${addtesss}" class="contact-address-checkbox"><label for="${addtesss}"></label><div class="isORno-delete"><a href="javaScript:;" class="isdelete"><img src="./images/isdelete_06.jpg" alt=""> </a><a href="javascript:;" class="isnodelete"><img src="./images/isnodelete_03.jpg" alt=""> </a></div><span>别名：${otherName}</span><div class="buttons"><a href="javascript:;" class="default">默认</a><a href="javascript:;" class="edit">编辑</a><a href="javascript:;" class="delBtn">删除</a></div>`;
+  <ul><li><span class ="people-name">${people}</span> >>>>>><b class="address-type123"></b></li><li><span class="province">${Province}</span><span class="city">${City}</span><span class="area">${Area}</span><span class="detailedADss">${detailedAddress}</span></li><li class="tellphone">${tellNumber}</li></ul><input type="checkbox" id="${addtesss}" class="contact-address-checkbox"><label for="${addtesss}"></label><div class="isORno-delete"><a href="javaScript:;" class="isdelete"><img src="./images/isdelete_06.jpg" alt=""> </a><a href="javascript:;" class="isnodelete"><img src="./images/isnodelete_03.jpg" alt=""> </a></div>别名：<span class="others-names">${otherName}</span><div class="buttons"><a href="javascript:;" class="default">默认</a><a href="javascript:;" class="edit">编辑</a><a href="javascript:;" class="delBtn">删除</a></div>`;
     for (var i = 0; i < document.querySelectorAll(".default").length; i++) {
       document.querySelectorAll(".default")[i].style.color = "#58595d";
       document.querySelectorAll(".default")[i].style.backgroundColor = "#fff";
@@ -4663,22 +4660,16 @@ document.getElementById("address-saveBtn").onclick = function () {
     newLi.querySelector(".default").style.color = "#fff";
     newLi.querySelector(".default").style.backgroundColor = "#2b2e33";
   } else {
-    newLi.innerHTML = `
-      <ul><li>${people} >>>>>><b class="address-type123"></b></li><li>${Province +
-      City +
-      Area +
-      detailedAddress}</li><li>${tellNumber}</li></ul><input type="checkbox" id="${addtesss}" class="contact-address-checkbox"><label for="${addtesss}"></label><div class="isORno-delete"><a href="javaScript:;" class="isdelete"><img src="./images/isdelete_06.jpg" alt=""> </a><a href="javascript:;" class="isnodelete"><img src="./images/isnodelete_03.jpg" alt=""> </a></div><span>别名：${otherName}</span><div class="buttons"><a href="javascript:;" class="default">设为默认</a><a href="javascript:;" class="edit">编辑</a><a href="javascript:;" class="delBtn">删除</a></div>`;
-
+    newLi.querySelector(".default").innerText = "设为默认";
   }
   if (status0) {
-    newLi.querySelector('.address-type123').innerText = '类：家'
-  }
-  else if (status1) {
-    newLi.querySelector('.address-type123').innerText = '类：公司'
+    newLi.querySelector(".address-type123").innerText = "类：家";
+  } else if (status1) {
+    newLi.querySelector(".address-type123").innerText = "类：公司";
   } else if (status2) {
-    newLi.querySelector('.address-type123').innerText = '类：父母家'
+    newLi.querySelector(".address-type123").innerText = "类：父母家";
   } else {
-    newLi.querySelector('.address-type123').innerText = ''
+    newLi.querySelector(".address-type123").innerText = "";
   }
 
   if (
@@ -4688,15 +4679,15 @@ document.getElementById("address-saveBtn").onclick = function () {
   ) {
     if (re.test(tellNumber)) {
       document.getElementById("addressAll").appendChild(newLi);
-      document.querySelector('.wrap1').style.display = 'none'
-      alert('添加成功!!!')
-      document.getElementById('consignee').value = ''
-      document.getElementById('contact-number').value = ''
-      document.getElementById('detailed-address').value = ''
-      document.getElementById('address-ortherName').value = ''
+      document.querySelector(".wrap1").style.display = "none";
+      alert("添加成功!!!");
+      document.getElementById("consignee").value = "";
+      document.getElementById("contact-number").value = "";
+      document.getElementById("detailed-address").value = "";
+      document.getElementById("address-ortherName").value = "";
       var arrs = document.querySelectorAll(".contact-address");
       for (var i = 0; i < arrs.length; i++) {
-        arrs[i].onclick = function () {
+        arrs[i].onclick = function() {
           var nums = this.parentNode.querySelectorAll(".contact-address");
           for (var j = 0; j < nums.length; j++) {
             nums[j].style.borderColor = "#fff";
@@ -4713,7 +4704,7 @@ document.getElementById("address-saveBtn").onclick = function () {
 
       var defaultArrs = document.querySelectorAll(".default");
       for (var i = 0; i < defaultArrs.length; i++) {
-        defaultArrs[i].onclick = function (ev) {
+        defaultArrs[i].onclick = function(ev) {
           var oEvent = ev || event;
           oEvent.cancelBubble = true;
           oEvent.stopPropagation();
@@ -4732,7 +4723,7 @@ document.getElementById("address-saveBtn").onclick = function () {
       }
       var delBtnArrs = document.querySelectorAll(".delBtn");
       for (var i = 0; i < delBtnArrs.length; i++) {
-        delBtnArrs[i].onclick = function () {
+        delBtnArrs[i].onclick = function() {
           this.parentNode.parentNode.querySelector(
             ".isORno-delete"
           ).style.display =
@@ -4742,7 +4733,7 @@ document.getElementById("address-saveBtn").onclick = function () {
       //确认删除-开始
       var isdeleteArrs = document.querySelectorAll(".isdelete");
       for (var i = 0; i < isdeleteArrs.length; i++) {
-        isdeleteArrs[i].onclick = function () {
+        isdeleteArrs[i].onclick = function() {
           this.parentNode.parentNode.parentNode.removeChild(
             this.parentNode.parentNode
           );
@@ -4766,19 +4757,205 @@ document.getElementById("address-saveBtn").onclick = function () {
       //取消删除-开始
       var isnodeleteArrs = document.querySelectorAll(".isnodelete");
       for (var i = 0; i < isnodeleteArrs.length; i++) {
-        isnodeleteArrs[i].onclick = function () {
+        isnodeleteArrs[i].onclick = function() {
           this.parentNode.style.display = "none";
         };
       }
       //取消删除-结束
+      //添加编辑按钮
+
+      newLi.querySelector(".edit").onclick = function(ev) {
+        var oEvent = ev || event;
+        oEvent.cancelBubble = true;
+        oEvent.stopPropagation();
+
+        document.querySelector(".wrap2").style.display = "flex";
+        // var LiId = newLi.id;
+
+        var peoplee = newLi.querySelector(".people-name").innerText;
+        var tellphonee = newLi.querySelector(".tellphone").innerText;
+        var provincee = newLi.querySelector(".province").innerText;
+        var citye = newLi.querySelector(".city").innerText;
+
+        var areae = newLi.querySelector(".area").innerText;
+        var detailedADsse = newLi.querySelector(".detailedADss").innerText;
+        var othersnamese = newLi.querySelector(".others-names").innerText;
+        addressInit(
+          "cmbProvince2",
+          "cmbCity2",
+          "cmbArea2",
+          provincee,
+          citye,
+          areae
+        );
+        document.getElementById("address-ortherName2").value = othersnamese;
+        document.getElementById("consignee2").value = peoplee;
+        document.getElementById("contact-number2").value = tellphonee;
+        document.getElementById("detailed-address2").value = detailedADsse;
+
+        document.getElementById("address-saveBtn2").onclick = function() {
+          var Province2 = document.getElementById("cmbProvince2").value;
+          var City2 = document.getElementById("cmbCity2").value;
+          var Area2 = document.getElementById("cmbArea2").value;
+          document
+            .getElementById("cmbProvince2")
+            .addEventListener("change", function() {
+              Province2 = document.getElementById("cmbProvince2").value;
+            });
+          document
+            .getElementById("cmbCity2")
+            .addEventListener("change", function() {
+              City2 = document.getElementById("cmbCity2").value;
+            });
+          document
+            .getElementById("cmbArea2")
+            .addEventListener("change", function() {
+              Area2 = document.getElementById("cmbArea2").value;
+            });
+          if (
+            document.getElementById("consignee2").value.trim() !== "" &&
+            document.getElementById("contact-number2").value.trim() !== "" &&
+            document.getElementById("detailed-address2").value.trim() !== ""
+          ) {
+            var re = /^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\d{8}$/;
+            if (re.test(document.getElementById("contact-number2").value)) {
+              newLi.querySelector(".province").innerText = Province2;
+              newLi.querySelector(".city").innerText = City2;
+              newLi.querySelector(".area").innerText = Area2;
+              newLi.querySelector(
+                ".others-names"
+              ).innerText = document.getElementById(
+                "address-ortherName2"
+              ).value;
+              newLi.querySelector(
+                ".people-name"
+              ).innerText = document.getElementById("consignee2").value;
+              newLi.querySelector(
+                ".tellphone"
+              ).innerText = document.getElementById("contact-number2").value;
+              newLi.querySelector(
+                ".detailedADss"
+              ).innerText = document.getElementById("detailed-address2").value;
+              var status = document.getElementById("set-toIs2").checked;
+              var defaultnums1 = newLi.querySelector(".default");
+              if (status) {
+                var defaultArrs = document.querySelectorAll(".default");
+
+                for (var i = 0; i < defaultArrs.length; i++) {
+                  defaultArrs[i].style.color = "#58595d";
+                  defaultArrs[i].style.backgroundColor = "#fff";
+                  defaultArrs[i].innerText = "设为默认";
+                }
+                defaultnums1.style.color = "#fff";
+                defaultnums1.style.backgroundColor = "#2b2e33";
+                defaultnums1.innerText = "默认";
+              }
+              var status3 = document.getElementById("is-what-home2").checked;
+              var status4 = document.getElementById("is-what-company2").checked;
+              var status5 = document.getElementById("is-what-parents2").checked;
+              if (status3) {
+                newLi.querySelector(".address-type123").innerText = "类：家";
+              } else if (status4) {
+                newLi.querySelector(".address-type123").innerText = "类：公司";
+              } else if (status5) {
+                newLi.querySelector(".address-type123").innerText =
+                  "类：父母家";
+              } else {
+                newLi.querySelector(".address-type123").innerText = "";
+              }
+              alert("保存编辑成功！！！！");
+            } else {
+              alert("手机号码格式不正确！");
+            }
+          } else {
+            alert("您有必填项为填，请填完才能保存！");
+          }
+        };
+      };
+      //添加编辑按钮-结束
+
+      document.getElementById("close-toAdd-address2").onclick = function() {
+        document.querySelector(".wrap2").style.display = "none";
+      };
+      document.getElementById("contact-number2").onblur = function() {
+        var arrs = this.value;
+        var re = /^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\d{8}$/;
+        if (!re.test(arrs)) {
+          document.getElementById("error-contact-number2").style.display =
+            "block";
+        } else {
+          document.getElementById("error-contact-number2").style.display =
+            "none";
+          // contactNumberStr = document.getElementById('consignee').value
+        }
+      };
+
+      document.getElementById("detailed-address2").onblur = function() {
+        var arrs = this.value;
+        if (arrs.trim() === "") {
+          document.getElementById("error-detailed-address2").style.display =
+            "block";
+        } else {
+          document.getElementById("error-detailed-address2").style.display =
+            "none";
+          // detailedDddressStr = document.getElementById('consignee').value
+        }
+      };
+
+      document.getElementById("consignee2").onblur = function() {
+        var arrs = this.value;
+        if (arrs.trim() === "") {
+          document.getElementById("error-consignee2").style.display = "block";
+        } else {
+          document.getElementById("error-consignee2").style.display = "none";
+          // consigneeStr = document.getElementById('consignee').value
+        }
+      };
+      document.getElementById("is-home2").onclick = function() {
+        document.getElementById("is-company2").style.border =
+          "1px solid #bbbfcb";
+        document.getElementById("is-company2").style.padding = "1px";
+        document.getElementById("is-parents2").style.border =
+          "1px solid #bbbfcb";
+        document.getElementById("is-parents2").style.padding = "1px";
+        this.style.border = "2px solid #fdd900";
+        this.style.padding = "0px";
+        document.getElementById("is-what-home2").checked = true;
+        document.getElementById("is-what-company2").checked = false;
+        document.getElementById("is-what-parents2").checked = false;
+      };
+
+      document.getElementById("is-company2").onclick = function() {
+        document.getElementById("is-home2").style.border = "1px solid #bbbfcb";
+        document.getElementById("is-home2").style.padding = "1px";
+        document.getElementById("is-parents2").style.border =
+          "1px solid #bbbfcb";
+        document.getElementById("is-parents2").style.padding = "1px";
+        this.style.border = "2px solid #fdd900";
+        this.style.padding = "0px";
+        document.getElementById("is-what-home2").checked = false;
+        document.getElementById("is-what-company2").checked = true;
+        document.getElementById("is-what-parents2").checked = false;
+      };
+
+      document.getElementById("is-parents2").onclick = function() {
+        document.getElementById("is-company2").style.border =
+          "1px solid #bbbfcb";
+        document.getElementById("is-company2").style.padding = "1px";
+        document.getElementById("is-home2").style.border = "1px solid #bbbfcb";
+        document.getElementById("is-home2").style.padding = "1px";
+        this.style.border = "2px solid #fdd900";
+        this.style.padding = "0px";
+        document.getElementById("is-what-home2").checked = false;
+        document.getElementById("is-what-company2").checked = false;
+        document.getElementById("is-what-parents2").checked = true;
+      };
     }
+  } else {
+    alert("必填项不能为空！！！");
   }
-  else {
-    alert('必填项不能为空！！！')
-  }
-  numms++
+  numms++;
 
-  // document.getElementById('').value =''  
-  // document.getElementById('').value =''  
-
+  // document.getElementById('').value =''
+  // document.getElementById('').value =''
 };
