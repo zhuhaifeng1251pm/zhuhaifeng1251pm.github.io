@@ -5,7 +5,7 @@ var nums = document.getElementById('counts').innerText
 function countTime() {
   var time = new Date()
   // console.log(time);
-  var setDays = '2018/12/31 24:00:00' //设置限定时间
+  var setDays = '2018/12/30 24:00:00' //设置限定时间
   // var Timeout = document.getElementById("endtimes").innerText;
   // console.log(Timeout);
   var totalSeconds = setDays * 24 * 3600
